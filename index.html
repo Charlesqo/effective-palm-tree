@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Pixi</title>
+  </head>
+  <body>
+    <main class="app">
+      <header class="header">
+        <div>
+          <h1>贪吃蛇（PixiJS）</h1>
+          <p class="subtle">方向键 / WASD 控制，空格或 P 暂停。</p>
+        </div>
+        <div class="scoreboard">
+          <span>得分</span>
+          <strong id="score">0</strong>
+        </div>
+      </header>
+
+      <section class="stage">
+        <div id="board" class="board" aria-label="Snake board"></div>
+      </section>
+
+      <section class="controls">
+        <div class="controls-row">
+          <button data-dir="up" aria-label="向上">▲</button>
+        </div>
+        <div class="controls-row">
+          <button data-dir="left" aria-label="向左">◀</button>
+          <button data-dir="down" aria-label="向下">▼</button>
+          <button data-dir="right" aria-label="向右">▶</button>
+        </div>
+      </section>
+
+      <section class="actions">
+        <button id="pause">暂停</button>
+        <button id="restart">重新开始</button>
+      </section>
+
+      <p id="status" class="status" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
